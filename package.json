@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server",
+    "build": "webpack",
+    "docker": "docker run --rm -it -v $PWD/dist:/usr/share/nginx/html -v $PWD/nginx.conf:/etc/nginx/nginx.conf  -p 82:80 nginx:alpine",
+    "docker:brotlin": "docker run --rm -it -v $PWD/dist:/usr/share/nginx/html -p 82:80 fholzer/nginx-brotli",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@swc/core": "^1.0.36",
-    "swc-loader": "^0.1.4",
+    "@swc/core": "^1.1.27",
+    "compression-webpack-plugin": "^3.1.0",
+    "swc-loader": "^0.1.8",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1"

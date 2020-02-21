@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+//import * as ReactDOM from "react-dom";
 
 export function Hello() {
   // Declare a new state variable, which we'll call "count"
@@ -7,8 +7,8 @@ export function Hello() {
 
   return (
     <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
+      <p>You clicked {count} times!</p>
+      <button onClick={() => setCount(count + 3)}>Click me</button>
     </div>
   );
 }
